@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whispering_Tales</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: auto;
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #050915;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: Poppins;
+        }
+
+        .container {
+            display: flex; 
+            min-width: 100%;  
+            padding: 0px; 
+            background-color: #050915;
+            background-size: cover;
+            box-sizing: content-box ;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        .content {
+            flex: 1.5;
+            padding: 20px;
+        }
+h1{
+    font-family: Playfair Display;
+}
+        .image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0px;
+        }
+
+        /* Input and button styles */
+        input[type="text"] {
+            padding: 8px;
+            width: 84.5%; 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: Poppins;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+ 
+        .content input[type="text"],
+        .content button {
+            background-color: #263b4d;
+            color: #ffffff; 
+            border: none;
+            font-family: Poppins
+        }
+ 
+        img {
+            max-width: auto;
+            max-height: 100vh; 
+        } 
+
+        .generated-box {
+            background-color: #263b4d;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+ 
+        .generated-text {
+            color: #ffffff;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Whispering Tales.</h1>
+            </br></br>
+            <form action="/" method="POST"> 
+                <input type="text" id="prompt" name="prompt"  placeholder="Write the beginning of your tale..." required>
+                <button type="submit">Write Story</button>
+            </form>
+            <div class="result"> 
+                <div class="generated-box">
+                    <p class="generated-text">{{ generated_text }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="image">
+            <img src="/static/images/women_img.jpg" alt="Image">
+        </div>
+    </div>
+</body>
+</html>
